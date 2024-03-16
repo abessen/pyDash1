@@ -48,11 +48,13 @@ st.markdown("""
 # Function to rerun the Streamlit app/script using Streamlit's experimental rerun feature
 def rerun():
     st.experimental_rerun()
+    
 
 # Cache the function that loads the image
-@st.cache_data
+#@st.cache_data
 def load_image(image_path):
     return Image.open(image_path)
+
 
 def main():
     # Add buttons for running the external programs in the sidebar
@@ -100,7 +102,7 @@ def main():
     time.sleep(60)  
     rerun()
 
-    
+
 
 if __name__ == '__main__':
     main()
