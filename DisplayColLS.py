@@ -50,7 +50,7 @@ def rerun():
     st.experimental_rerun()
 
 # Cache the function that loads the image
-@st.cache
+@st.cache_data
 def load_image(image_path):
     return Image.open(image_path)
 
