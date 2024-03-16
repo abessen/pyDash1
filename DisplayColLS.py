@@ -15,7 +15,7 @@ st.markdown("""
         }
         </style>
     """, unsafe_allow_html=True)
-    
+
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
@@ -24,7 +24,7 @@ hide_st_style = """
             header {visibility: hidden;}
             </style>
             """
-st.markdown(hide_st_style, unsafe_allow_html=True)  
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.markdown(
     """
@@ -48,6 +48,11 @@ st.markdown("""
 # Function to rerun the Streamlit app/script using Streamlit's experimental rerun feature
 def rerun():
     st.experimental_rerun()
+
+# Cache the function that loads the image
+@st.cache
+def load_image(image_path):
+    return Image.open(image_path)
 
 def main():
     # Add buttons for running the external programs in the sidebar
@@ -85,15 +90,15 @@ def main():
     image_path = "ColLSToday.jpg"
     #image_path = os.path.join("C:", "pyRun1", "ColLSToday.jpg")
 
-    # Open the image using PIL
-    image = Image.open(image_path)
+    # Load the image using the cached function
+    image = load_image(image_path)
 
     # Display the image to automatically resize with the column width
     st.image(image, use_column_width=True)
 
     # Wait for 60 seconds before the next iteration
     time.sleep(60)  
-    st.rerun()
+    rerun()
 
 if __name__ == '__main__':
     main()
