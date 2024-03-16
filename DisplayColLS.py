@@ -100,5 +100,7 @@ def main():
     time.sleep(60)  
     rerun()
 
+    
+
 if __name__ == '__main__':
     main()
