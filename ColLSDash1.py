@@ -38,20 +38,20 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Local path to the image
-    image_path = "ColLSToday.jpg"
+# Load the image once and store it globally
+image_path = "ColLSToday1.jpg"
+image = Image.open(image_path)
 
-    # Load the image using the cached function
-    image = load_image(image_path)
+#def rerun_thread():
+#    time.sleep(60)
+#    os.execl(sys.executable, sys.executable, *sys.argv)
 
+def main():
     # Display the image to automatically resize with the column width
     st.image(image, use_column_width=True)
 
-    # Wait for 60 seconds before the next iteration
-    time.sleep(60)  
-    rerun()
-
-
+    # Start a thread to rerun the app after 60 seconds
+   # threading.Thread(target=rerun_thread, daemon=True).start()
 
 if __name__ == '__main__':
     main()
