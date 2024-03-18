@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run DisplayColLSPrimary.py
+web: sh setup.sh && streamlit run ColLSDash1.py
