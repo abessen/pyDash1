@@ -6,6 +6,7 @@ import os
 
 # Set Page Configuration
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+
 # Inject custom CSS for title styling
 st.markdown("""
         <style>
