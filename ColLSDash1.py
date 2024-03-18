@@ -6,7 +6,8 @@ import os
 import time
 import sys  # Add this line for importing sys
 
-
+# Set Page Configuration
+st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
