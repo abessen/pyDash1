@@ -91,7 +91,6 @@ def main():
 
     # Local path to the image
     image_path = "ColLSToday.jpg"
-    #image_path = os.path.join("C:", "pyRun1", "ColLSToday.jpg")
 
     # Load the image using the cached function
     image = load_image(image_path)
