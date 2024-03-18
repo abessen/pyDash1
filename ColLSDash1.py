@@ -42,9 +42,7 @@ st.markdown("""
 image_path = "ColLSToday1.jpg"
 image = Image.open(image_path)
 
-#def rerun_thread():
-#    time.sleep(60)
-#    os.execl(sys.executable, sys.executable, *sys.argv)
+
 
 def main():
     # Display the image to automatically resize with the column width
